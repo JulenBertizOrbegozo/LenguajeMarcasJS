@@ -26,3 +26,45 @@ nav a:hover {
     position:absolute;
     top:50px;
 }
+/* Modo claro (por defecto) */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+#desplegable {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, auto);
+    gap: 5px; /* Espaciado entre elementos */
+    border: 1px solid black;
+    width: 150px; /* Ajustado para mostrar mejor el grid */
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 40%;
+}
+
+/* Para que los párrafos ocupen toda la fila */
+#desplegable p {
+    grid-column: span 5; /* Ocupa las 5 columnas */
+    text-align: center;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Estilos de los divs */
+.estilos {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
