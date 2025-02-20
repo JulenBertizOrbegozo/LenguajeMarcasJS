@@ -1,0 +1,28 @@
+nav {
+    top:0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: 20px;
+}
+nav a, nav button{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    background-color: #333;
+    border: solid 0px;
+    margin-top: 2px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+#contenedorMain{
+    position:absolute;
+    top:50px;
+}
