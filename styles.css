@@ -1,3 +1,4 @@
+/*FOR ALL PAGES*/
 nav {
     top:0;
     position: fixed;
@@ -9,6 +10,7 @@ nav {
     justify-content: center;
     padding: 10px;
     height: 20px;
+    margin-left: 0;
 }
 nav a, nav button{
     color: white;
@@ -22,18 +24,19 @@ nav a, nav button{
 nav a:hover {
     text-decoration: underline;
 }
+
+/*FOR PERSONALIZAR*/
 #contenedorMain{
     position:absolute;
     top:50px;
 }
-/* Modo claro (por defecto) */
+
 body {
     background-color: white;
     color: black;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Modo oscuro */
 body.dark-mode {
     background-color: black;
     color: white;
@@ -42,23 +45,24 @@ body.dark-mode {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, auto);
-    gap: 5px; /* Espaciado entre elementos */
+    gap: 5px; 
     border: 1px solid black;
-    width: 150px; /* Ajustado para mostrar mejor el grid */
-    padding: 10px;
+    width: 150px; 
+    height: 0;
+    padding: 0px;
     margin-top: 30px;
-    margin-left: 40%;
+    margin-left: 43%;
+    overflow: hidden;
 }
 
-/* Para que los párrafos ocupen toda la fila */
 #desplegable p {
-    grid-column: span 5; /* Ocupa las 5 columnas */
+    grid-column: span 5; 
     text-align: center;
     font-weight: bold;
     margin: 5px 0;
 }
 
-/* Estilos de los divs */
+
 .estilos {
     height: 24px;
     width: 100%;
@@ -67,4 +71,12 @@ body.dark-mode {
     justify-content: center;
     border: 1px solid black;
     cursor: pointer;
+}
+
+/*FOR FORM*/
+#formulario{
+    position: absolute;
+    height: auto;
+    width:25%;
+    margin-left: calc(50%-(width/2));
 }

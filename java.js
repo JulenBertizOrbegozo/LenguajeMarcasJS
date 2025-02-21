@@ -1,3 +1,4 @@
+/*FOR ALL PAGES*/
 document.addEventListener('DOMContentLoaded', function() {
     const darkModeBtn = document.querySelector('.dark-mode-btn');
     const body = document.body;
@@ -6,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.toggle('dark-mode');
     });
 });
+
+/*FOR PERSONALIZAR*/
 function cambiarColor(color) {
     document.getElementById('contenedorMain').style.color = color;
 }
@@ -18,6 +21,23 @@ function cambiarFuente(fuente){
 function cambiarFondo(color1, color2, color3){
     document.body.style.color = rgb(color1, color2, color3);
 }
-function desplegar(){
+function desplegar() {
+    let div = document.getElementById("desplegable");
 
+    if (div.style.height === "0px" || div.style.height === "") {
+        div.style.height = div.scrollHeight + "px";
+        div.style.padding = "10";
+    } else {
+        div.style.height = "0px";
+        div.style.padding = "0px"
+    }
 }
+function cambiarFondo(r, g, b) {
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    document.querySelector("nav").style.backgroundColor = "#333"; 
+    document.getElementById("desplegable").style.backgroundColor = "white";
+}
+
+
+
+/*FOR FORM*/
