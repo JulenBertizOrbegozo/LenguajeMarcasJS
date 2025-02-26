@@ -41,3 +41,12 @@ function cambiarFondo(r, g, b) {
 
 
 /*FOR FORM*/
+function formPais(){
+    let valor = document.getElementById("country").value;
+    let altura = document.getElementById("comunidades").height;
+    if (valor === "Spain"){
+        document.getElementById("comunidades").style.display = "block";
+    } else {
+        document.getElementById("comunidades").style.display = "none";
+    }
+}
