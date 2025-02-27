@@ -74,16 +74,18 @@ body.dark-mode {
 }
 
 /*FOR FORM*/
-#formulario{
+#formulario {
     position: absolute;
     height: auto;
-    width:25%;
-    margin-left: calc(50%-(width/2));
-    border:solid black 1px;
+    width: 25%;
+    border: solid black 1px;
     top: 50px;
-    left:calc(50%-(width/2));
+    left: 50%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    padding: 10px;
 }
-#comunidades{
-    height: 0px;
+
+.comunidades{
+    height: auto;
     display: none;
 }

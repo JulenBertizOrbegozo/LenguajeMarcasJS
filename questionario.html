@@ -19,7 +19,7 @@
         <label for="email"><b>Email:</b></label><br>
         <input type="email" id="email" placeholder="Enter your email" style="width: 98%; margin-left:1%;"><br><br>
 
-        <button onclick="validateForm()" style="width: 98%; margin-left:1%;">Validate</button><br><br>
+        <button id="validate-button" onclick="validateForm()" style="width: 98%; margin-left:1%;">Validate</button><br><br>
 
         <label><b>Gender:</b></label>
         <div class="gender-options">
@@ -33,6 +33,7 @@
             <label for="other"><b>Other</b></label>
         </div><br>
 
+        
         <label for="country"><b>Country:</b></label><br>
         <select id="country" style="width: 98%; margin-left:1%;" onchange="formPais()">
             <option>Select your country</option>
@@ -43,11 +44,12 @@
             <option>Other</option>
         </select><br><br>
 
-        <div id="comunidades">
-        <label for="comunity">Comunity:</label><br>
-        <select name="comuity" id="comunity">
+
+        <div class="comunidades" id="comunidadess">
+        <label for="comunity"><b>Comunity:</b></label><br>
+        <select id="comunity" style="width: 98%; margin-left:1%;" onchange="formComunidad()">
             <option>Select your comunity</option>
-            <option>Navarra</option>
+            <option value="Navarra">Navarra</option>
             <option>País vasco</option>
             <option>Aragón</option>
             <option>Barcelona</option>
@@ -55,7 +57,19 @@
             <option>Valencia</option>
         </select><br><br></div>
 
-        <button style="width: 98%; margin-left:1%;">Send</button>
+        <div id="city" class="comunidades">
+        <label for="city"><b>City:</b></label><br>
+        <select id="city" style="width: 98%; margin-left:1%;">
+            <option>Select your city</option>
+            <option>Pamplona</option>
+            <option>Elizondo</option>
+            <option>Lerín</option>
+            <option>San Juan</option>
+            <option>Rochapea</option>
+            <option>Burlada</option>
+        </select><br><br></div>
+
+        <button style="width: 98%; margin-left:1%;">Send</button> <br>
     </div>
 
     <script src="java.js"></script>

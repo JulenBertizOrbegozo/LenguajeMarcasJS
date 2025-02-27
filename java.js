@@ -41,12 +41,56 @@ function cambiarFondo(r, g, b) {
 
 
 /*FOR FORM*/
-function formPais(){
+function formPais() {
     let valor = document.getElementById("country").value;
-    let altura = document.getElementById("comunidades").height;
-    if (valor === "Spain"){
-        document.getElementById("comunidades").style.display = "block";
+    let comunidadDiv = document.getElementById("comunidadess");
+    if (valor === "Spain") {
+        comunidadDiv.style.display = "block";
     } else {
-        document.getElementById("comunidades").style.display = "none";
+        comunidadDiv.style.display = "none";
+        document.getElementById("city").style.display = "none"; // Ocultar city si no es Spain
     }
 }
+
+function formComunidad() {
+    let valor = document.getElementById("comunity").value;
+    if (valor === "Navarra") {
+        document.getElementById("city").style.display = "block";
+    } else {
+        document.getElementById("city").style.display = "none";
+    }
+}
+function validateForm() {
+    let email = document.getElementById("email").value.trim();
+    let emailPattern = /^[^@]+@[a-zA-Z]{3,}\.[a-zA-Z]{2,}$/;
+    let messageElement = document.getElementById("email-message");
+
+    if (!messageElement) {
+        messageElement = document.createElement("p");
+        messageElement.id = "email-message";
+        document.getElementById("formulario").insertBefore(messageElement, document.getElementById("validate-button"));
+    }
+
+    if (emailPattern.test(email)) {
+        messageElement.textContent = "Email válido";
+        messageElement.style.color = "green";
+    } else {
+        messageElement.textContent = "Email inválido";
+        messageElement.style.color = "red";
+    }
+}
+
+
+/*FOR Images*/
+document.querySelector("button").addEventListener("click", () => {
+    const randomNum = Math.floor(Math.random() * 5) + 1;
+    const randomImage = document.getElementById("randomImage");
+
+    switch (randomNum) {
+        case 1: randomImage.src = "img1.jpg"; break;
+        case 2: randomImage.src = "img2.jpg"; break;
+        case 3: randomImage.src = "img3.jpg"; break;
+        case 4: randomImage.src = "img4.jpg"; break;
+        case 5: randomImage.src = "img5.jpg"; break;
+    }
+});
