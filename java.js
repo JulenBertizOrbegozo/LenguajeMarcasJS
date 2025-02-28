@@ -82,15 +82,40 @@ function validateForm() {
 
 
 /*FOR Images*/
-document.querySelector("button").addEventListener("click", () => {
+function cambiarImagen() {
     const randomNum = Math.floor(Math.random() * 5) + 1;
-    const randomImage = document.getElementById("randomImage");
+    document.getElementById("dinamica").src = `img/img${randomNum}.jpg`;
+}
 
-    switch (randomNum) {
-        case 1: randomImage.src = "img1.jpg"; break;
-        case 2: randomImage.src = "img2.jpg"; break;
-        case 3: randomImage.src = "img3.jpg"; break;
-        case 4: randomImage.src = "img4.jpg"; break;
-        case 5: randomImage.src = "img5.jpg"; break;
-    }
-});
+function rotarImagenes() {
+    let div = document.getElementById("automatica");
+    let num = 1; 
+
+    setInterval(() => {
+        if (num === 5) {
+            num = 1; 
+        } else {
+            num++; 
+        }
+
+        switch (num) {
+            case 1:
+                div.style.backgroundImage = "url('img/img1.jpg')";
+                break;
+            case 2:
+                div.style.backgroundImage = "url('img/img2.jpg')";
+                break;
+            case 3:
+                div.style.backgroundImage = "url('img/img3.jpg')";
+                break;
+            case 4:
+                div.style.backgroundImage = "url('img/img4.jpg')";
+                break;
+            case 5:
+                div.style.backgroundImage = "url('img/img5.jpg')";
+                break;
+        }
+    }, 500); 
+}
+
+window.onload = rotarImagenes;
